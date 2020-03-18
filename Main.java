@@ -4,6 +4,7 @@ class Animal{
     public String Name = "くまさん軽自動車"; 
     public int Age = 100;
 
+
     //メソッド
     public void ShowProfile(){
         System.out.println("名前は" + Name + "," + Age + "歳です");
@@ -52,13 +53,19 @@ class Dog extends Animal{
 //ここを使って呼び出す
 public class Main{
     public static void main(String[] args){ //メソッドの作成
-        //問題8-1-2
-        // Cat cat = new Cat();
-        // cat.Sleep();
 
-        //問題8-1-4
-        // Animal animal = new Animal();
-        // animal.ShowProfile();
+        //コマンドライン引数から入力した文字列をAnimalクラスのNameに設定してください
+        String[] Name;
+        Name = new String[3];
+
+
+        // 問題8-1-2
+        Cat cat = new Cat();
+        cat.Sleep();
+
+        // 問題8-1-4
+        Animal animal = new Animal();
+        animal.ShowProfile();
 
 
         //問題8-２-2
@@ -109,12 +116,5 @@ public class Main{
         //問題8-4-3
         animal[1].Speak();
         animal[3].Speak();
-
-
-
-
-
-
-
     }
 }
