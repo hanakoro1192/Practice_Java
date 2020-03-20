@@ -16,8 +16,8 @@ class Animal{
         System.out.println("名前は" + Name + "," + Age + "歳です");
     }
 
-    public void Speak(){
-        System.out.println("......");
+    public void Speak(String name, int age){
+        System.out.println(name + age);
     }
 }
 
@@ -39,8 +39,8 @@ class Cat extends Animal{
     }
 
     @Override
-    public void Speak(){
-        System.out.println("ニャー");
+    public void Speak(String name, int age){
+        System.out.println("ニャー" + name + age);
     }
 }
 
@@ -59,13 +59,13 @@ class Dog extends Animal{
     // public int Age = 15;
 
     //問題8-２-1
-    public void Run(){
-        System.out.println("トコトコ");
+    public void Run(String name){
+        System.out.println("トコトコ" + name);
     }
 
     @Override
-    public void Speak(){
-        System.out.println("ワンワン");
+    public void Speak(String name, int age){
+        System.out.println("ワンワン" + name + age);
     }
 }
 
@@ -99,7 +99,7 @@ public class Main{
         Cat kumasan_cat1 = new Cat("くまさんの昼食", 10);
 
         //問題8-3-4
-        kumasan_cat1.Speak();
+        kumasan_cat1.Speak("くまさん", 15);
 
         //問題8-２-2
         Dog dog = new Dog("くまさんの犬", 100);
@@ -108,13 +108,13 @@ public class Main{
         dog.ShowProfile();
 
         //問題8-２-6
-        dog.Run();
+        dog.Run("くまさん");
 
         //問題8-3-1
         Dog kumasanDog = new Dog("くまさんの犬", 100);
 
         //問題8-3-4
-        kumasanDog.Speak();
+        kumasanDog.Speak("盗塁王くまさん",100);
 
         //問題8-4-1
         Animal[] animals = new Animal[4];
@@ -123,15 +123,15 @@ public class Main{
         animals[2] = new Cat("くまさんのねこ", 10);
 
         //問題8-4-3
-        animals[0].Speak();
-        animals[2].Speak();
+        animals[0].Speak("三冠王くまさん", 12);
+        animals[2].Speak("最強バッターくまさん", 14);
 
         //問題8-4-2
         animals[1] = new Dog("くまさんの犬", 100);
         animals[3] = new Dog("くまさんの犬", 100);
 
         //問題8-4-3
-        animals[1].Speak();
-        animals[3].Speak();
+        animals[1].Speak("くまさんとちはるさん", 19);
+        animals[3].Speak("うんこ", 31);
     }
 }
