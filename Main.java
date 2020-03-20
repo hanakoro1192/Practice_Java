@@ -40,7 +40,7 @@ class Cat extends Animal{
 
     @Override
     public void Speak(String name, int age){
-        System.out.println("ニャー" + name + age);
+        System.out.println(name + age);
     }
 }
 
@@ -65,7 +65,7 @@ class Dog extends Animal{
 
     @Override
     public void Speak(String name, int age){
-        System.out.println("ワンワン" + name + age);
+        System.out.println(name + age);
     }
 }
 
@@ -97,9 +97,12 @@ public class Main{
 
         //問題8-3-1
         Cat kumasan_cat1 = new Cat("くまさんの昼食", 10);
+        kumasan_cat1.Name = "うんこ";
+        kumasan_cat1.Age = 900;
 
         //問題8-3-4
-        kumasan_cat1.Speak("くまさん", 15);
+        //ここの中身は変更なし
+        kumasan_cat1.Speak(kumasan_cat1.Name, kumasan_cat1.Age);
 
         //問題8-２-2
         Dog dog = new Dog("くまさんの犬", 100);
@@ -114,7 +117,7 @@ public class Main{
         Dog kumasanDog = new Dog("くまさんの犬", 100);
 
         //問題8-3-4
-        kumasanDog.Speak("盗塁王くまさん",100);
+        kumasanDog.Speak(kumasan_cat1.Name, kumasan_cat1.Age);
 
         //問題8-4-1
         Animal[] animals = new Animal[4];
@@ -123,15 +126,15 @@ public class Main{
         animals[2] = new Cat("くまさんのねこ", 10);
 
         //問題8-4-3
-        animals[0].Speak("三冠王くまさん", 12);
-        animals[2].Speak("最強バッターくまさん", 14);
+        animals[0].Speak(kumasan_cat1.Name, kumasan_cat1.Age);
+        animals[2].Speak(kumasan_cat1.Name, kumasan_cat1.Age);
 
         //問題8-4-2
         animals[1] = new Dog("くまさんの犬", 100);
         animals[3] = new Dog("くまさんの犬", 100);
 
         //問題8-4-3
-        animals[1].Speak("くまさんとちはるさん", 19);
-        animals[3].Speak("うんこ", 31);
+        animals[1].Speak(kumasan_cat1.Name, kumasan_cat1.Age);
+        animals[3].Speak(kumasan_cat1.Name, kumasan_cat1.Age);
     }
 }
